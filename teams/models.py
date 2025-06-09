@@ -21,8 +21,8 @@ class Team(models.Model):
     )
 
     class Meta:
-        verbose_name = "Team"
-        verbose_name_plural = "Teams"
+        verbose_name = "Команда"
+        verbose_name_plural = "Команды"
 
     def __str__(self):
         return f"Team - {self.name} (Admin: {self.team_admin})"
