@@ -1,7 +1,6 @@
 from django.db.models import Q
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import ModelSerializer
-
 from meetings.models import Meeting
 
 

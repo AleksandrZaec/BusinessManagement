@@ -32,3 +32,15 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+
+class MemberSerializer(serializers.ModelSerializer):
+    """Serializer for using the User model to output team members."""
+
+    class Meta:
+        model = User
+        fields = (
+            "id",
+            "email",
+            "role",
+            "is_active",
+        )
