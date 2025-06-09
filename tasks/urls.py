@@ -5,7 +5,7 @@ from tasks.apps import TasksConfig
 app_name = TasksConfig.name
 
 router = DefaultRouter()
-router.register(r"tasks", TaskViewSet, basename="task")
-router.register(r"comments", CommentViewSet, basename="comment")
+router.register(r"", TaskViewSet, basename="task")
+router.register(r"", CommentViewSet, basename="comment")
 
 urlpatterns = router.urls

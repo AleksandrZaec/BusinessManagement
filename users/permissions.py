@@ -31,3 +31,16 @@ class IsOwnerPermission(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         """Checks whether the user is an object."""
         return obj == request.user
+
+
+class IsAuthorOrAdminForUpdateDelete(permissions.BasePermission):
+    """
+    Only the author can update (PUT/PATCH)
+    Only the admin can DELETE
+    """
+    def has_object_permission(self, request, view, obj):
+        if request.method in ['PUT', 'PATCH']:
+            return obj.author == request.user
+        if request.method == 'DELETE':
+            return request.user.is_staff
+        return True

@@ -5,6 +5,6 @@ from evaluations.views import EvaluationViewSet
 app_name = EvaluationsConfig.name
 
 router = DefaultRouter()
-router.register(r"evaluations", EvaluationViewSet, basename="evaluation")
+router.register(r"", EvaluationViewSet, basename="evaluation")
 
 urlpatterns = router.urls
