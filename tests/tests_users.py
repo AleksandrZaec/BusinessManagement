@@ -12,6 +12,7 @@ class UserTestCase(APITestCase):
     """Tests for the User API"""
 
     def setUp(self):
+        """Environment for the tests."""
         self.user_role = User.objects.create(
             email="user@test.test",
             role="user",

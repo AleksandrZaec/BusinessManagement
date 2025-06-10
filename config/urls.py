@@ -25,5 +25,5 @@ urlpatterns = [
     path("meeting/", include("meetings.urls", namespace="meeting")),
     path("task/", include("tasks.urls", namespace="task")),
     path("team/", include("teams.urls", namespace="team")),
-
+    path("calendar/", include("calendars.urls", namespace="calendar")),
 ]
