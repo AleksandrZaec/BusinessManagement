@@ -9,7 +9,7 @@ class TeamCreateAPIView(CreateAPIView):
     """Create a new Team instance. Admin only."""
 
     serializer_class = TeamSerializer
-    permission_classes = (IsAuthenticated & IsAdminPermission,)
+    permission_classes = [IsAuthenticated, IsAdminPermission]
 
 
 class TeamListAPIView(ListAPIView):
@@ -31,11 +31,11 @@ class TeamUpdateAPIView(UpdateAPIView):
 
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
-    permission_classes = (IsAuthenticated & IsAdminPermission)
+    permission_classes = [IsAuthenticated, IsAdminPermission]
 
 
 class TeamDestroyAPIView(DestroyAPIView):
     """Delete a Team instance. Admin only."""
 
     queryset = Team.objects.all()
-    permission_classes = (IsAuthenticated & IsAdminPermission)
+    permission_classes = [IsAuthenticated, IsAdminPermission]
