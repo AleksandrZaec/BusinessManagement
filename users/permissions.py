@@ -42,5 +42,5 @@ class IsAuthorOrAdminForUpdateDelete(permissions.BasePermission):
         if request.method in ['PUT', 'PATCH']:
             return obj.author == request.user
         if request.method == 'DELETE':
-            return request.user.is_staff
+            return request.user.role == "manager" or request.user.is_staff
         return True

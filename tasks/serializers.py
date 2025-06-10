@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from tasks.models import Comment, Task
+from rest_framework import serializers
 
 
 class TaskSerializer(ModelSerializer):
@@ -19,7 +20,8 @@ class TaskSerializer(ModelSerializer):
 
 
 class CommentSerializer(ModelSerializer):
-    """Serializer for the Comment model."""
+    author = serializers.PrimaryKeyRelatedField(read_only=True)
+    created_at = serializers.DateTimeField(read_only=True)
 
     class Meta:
         model = Comment
