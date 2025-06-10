@@ -16,7 +16,9 @@ dependencies = [
     "black (>=25.1.0,<26.0.0)",
     "isort (>=6.0.1,<7.0.0)",
     "djangorestframework-simplejwt (>=5.5.0,<6.0.0)",
-    "django-extensions (>=4.1,<5.0)"
+    "django-extensions (>=4.1,<5.0)",
+    "drf-spectacular (>=0.28.0,<0.29.0)",
+    "coverage (>=7.8.2,<8.0.0)"
 ]
 
 
